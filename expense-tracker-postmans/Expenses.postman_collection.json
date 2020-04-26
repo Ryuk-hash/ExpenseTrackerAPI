@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "3657d53a-64d4-420c-bac7-ceea9a81aba2",
+		"name": "Expenses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Expenses from DB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/expenses",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Parametric Expenses from DB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/expenses?amount[lte]=10000",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"expenses"
+					],
+					"query": [
+						{
+							"key": "amount[lte]",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Expense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "amount",
+							"value": "20000",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Party",
+							"type": "text"
+						},
+						{
+							"key": "day",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/expenses/addExpense",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"expenses",
+						"addExpense"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

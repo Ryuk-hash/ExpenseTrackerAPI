@@ -1,0 +1,32 @@
+{
+  "name": "final-expense-tracker",
+  "version": "1.0.0",
+  "description": "A simple app that tracks expenses for the respective user. | NodeJS + Express +MongoDB |",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryuk-hash/ExpenseTrackerAPI"
+  },
+  "author": "Mandeep Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ryuk-hash/ExpenseTrackerAPI/issues"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "http-errors": "^1.7.3",
+    "mongoose": "^5.9.10",
+    "morgan": "^1.10.0",
+    "pug": "^2.0.4",
+    "twilio": "^3.42.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
