@@ -1,14 +1,18 @@
 version: 0.0
-os: linux
+os: linux 
 files:
-  - source: .
-    destination: /home/ec2-user/ExpenseTrackerAPI/
+  - source: /
+    destination: /home/ec2-user/ExpenseTrackerAPI
 hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 300
+      runas: root
   AfterInstall:
-   - location: setup.sh
-     timeout: 300
-     runas: root
+    - location: scripts/after_install.sh
+      timeout: 300
+      runas: root
   ApplicationStart:
-   - location: run.sh
-     timeout: 300
-     runas: root
+    - location: scripts/application_start.sh
+      timeout: 300
+      runas: root
