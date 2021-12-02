@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const config = require('./config');
+const config = require('../config');
 const app = require('./app');
 
 const DB = config.dataBase.replace(

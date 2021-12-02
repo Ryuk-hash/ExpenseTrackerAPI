@@ -6,11 +6,14 @@ const {
   viewCategories,
   viewCategory,
   createCategory,
-  deleteCategory
+  deleteCategory,
 } = categoryController;
 
-router.route('/').get(viewCategories)
+router.route('/').get(viewCategories);
 router.route('/addCategory/').post(createCategory);
-router.route('/:id').get(viewCategory).delete(deleteCategory);
+router
+  .route('/:id')
+  .get(viewCategory)
+  .delete(deleteCategory);
 
 module.exports = router;
